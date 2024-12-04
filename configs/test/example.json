@@ -1,0 +1,19 @@
+{
+  "pipeline": {
+    "seed": 0,
+    "batch_size": 16,
+    "logging_freq": 100,
+    "output_predictions": "results/mix/roberta-large/0/jsd.json",
+    "loss_type": "jsd"
+  },
+  "task": {
+    "model_name": "roberta-large",
+    "dataset_name": "dis",
+    "dataset_directory": "data/mix-mhsc-hx",
+    "num_labels": 2,
+    "checkpoint": "outputs/mix/roberta-large/0/jsd/roberta-large_1.pt"
+  },
+  "processing": {
+    "padding": false
+  }
+}

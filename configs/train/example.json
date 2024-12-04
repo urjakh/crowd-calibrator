@@ -1,0 +1,31 @@
+{
+  "pipeline": {
+    "seed": 0,
+    "output_directory": "outputs/mix/roberta-large/0",
+    "train_batch_size": 8,
+    "validation_batch_size": 16,
+    "n_epochs": 10,
+    "logging_freq": 100,
+    "mixed_precision": "fp16"
+  },
+  "task": {
+    "model_name": "roberta-large",
+    "dataset_name": "mhsc_hx",
+    "dataset_directory": "data/mix-mhsc-hx",
+    "num_labels": 3
+  },
+  "optimizer": {
+    "learning_rate": 0.00001,
+    "learning_rate_scheduler": "linear",
+    "weight_decay": 0.1,
+    "num_warmup_steps": 3137,
+    "loss_type": "jsd"
+  },
+  "processing": {
+    "padding": false
+  },
+  "wandb": {
+    "project_name": "crowd-calibrator",
+    "run_name": "mhsc-hx-roberta-large-jsd-0"
+  }
+}
